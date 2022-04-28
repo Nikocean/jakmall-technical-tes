@@ -1,10 +1,25 @@
+<script setup>
+import Shipment from '@/components/Shipment.vue';
+import Payment from '@/components/Payment.vue';
+import Summary from '@/components/Summary.vue';
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div class="body">
+      <Shipment />
+      <Payment />
+    </div>
+
+    <Summary />
   </div>
 </template>
 
 <style>
+.body{
+  margin-right: 30px;
+}
+
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -13,3 +28,4 @@
   }
 }
 </style>
+

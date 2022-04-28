@@ -32,7 +32,7 @@ input {
 export default {
   data() {
     return {
-      msg: "asdasd",
+      
     };
   },
 };
