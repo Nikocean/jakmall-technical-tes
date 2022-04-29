@@ -1,3 +1,16 @@
+<script>
+export default {
+  setup() {
+    
+  },
+  method:{
+    nextPage(){
+      this.$router.push('/jakmall-test/src/views/AboutView.vue')
+    }
+  }
+}
+</script>
+
 <template>
   <div class="summary">
     <header>
@@ -18,7 +31,7 @@
         </div>
       </div>
 
-      <button class="ctn-payment">Continue to Payment</button>
+      <button class="ctn-payment" @click="nextPage()">Continue to Payment</button>
     </div>
     
   </div>

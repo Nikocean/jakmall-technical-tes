@@ -1,3 +1,20 @@
+<script setup>
+const app = new Vue( {
+  el:'#app',
+  data:{
+    error:[],
+    phoneNumber: null,
+  },
+  method: {
+    checkForm:function (e){
+      if (phoneNumber.length() < 10 || phoneNumber.length() > 11 ) {
+        this.error.push("No. HP salah");
+      }
+    }
+  }
+})
+</script>
+
 <template>
   <div class="delivery-details">
     <div class="delivery-detail-title">
@@ -14,8 +31,11 @@
         <input type="text" class="dropshipper" placeholder="Dropshipper Name">
       </div>
       <div class="input-phone">
-        <input type="text" class="phone" placeholder="Phone Number">
-        <input type="text" class="drophipper-phone" placeholder="Dropshipper phone number">
+        <form id="app" @submit="checkForm">
+          <input type="number" class="phone" id="phoneNumber" v-model="phoneNumber" placeholder="Phone Number">
+          <input type="number" class="drophipper-phone" placeholder="Dropshipper phone number">
+        </form>
+
       </div>
       <div class="input-address">
         <input type="text" class="address" placeholder="Delivery Address">
