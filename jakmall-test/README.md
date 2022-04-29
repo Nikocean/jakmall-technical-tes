@@ -27,3 +27,4 @@ npm run dev
 ```sh
 npm run build
 ```
+Selamat pagi bapak ibu sekalian, berikut hasil kerja saya sesuai guidance yang diberikan ada yang belum tercover pengerjaannya, terima kasih
